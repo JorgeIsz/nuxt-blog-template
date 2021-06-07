@@ -7,16 +7,29 @@
     <main>
       <NuxtContent :document="post" />
     </main>
+    <div class="other-posts">
+      <OtherPostLink :post="prev" side="left" />
+      <OtherPostLink :post="next" side="right" />
+    </div>
   </div>
 </template>
 
 <script>
+import OtherPostLink from '~/components/OtherPostLink.vue'
 export default {
+  components: { OtherPostLink },
   async asyncData ({ $content, params, redirect }) {
     try {
       const post = await $content('posts/' + params.slug).fetch()
+      const [prev, next] = await $content('posts')
+        .only(['title', 'slug'])
+        .sortBy('createdAt', 'asc')
+        .surround(params.slug)
+        .fetch()
       return {
-        post
+        post,
+        prev,
+        next
       }
     } catch {
       redirect(404, '/404')
@@ -45,6 +58,13 @@ export default {
 
 .post__date {
   color: var(--color-gray);
+}
+
+.other-posts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
 }
 
 </style>
