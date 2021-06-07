@@ -15,7 +15,9 @@
 </template>
 
 <script>
-import OtherPostLink from '~/components/OtherPostLink.vue'
+import OtherPostLink from '@/components/OtherPostLink.vue'
+import { siteName } from '@/lib/metadata'
+
 export default {
   components: { OtherPostLink },
   async asyncData ({ $content, params, redirect }) {
@@ -37,7 +39,7 @@ export default {
   },
   head () {
     return {
-      title: this.post.title,
+      title: `${this.post.title} | ${siteName}`,
       meta: [
         {
           hid: 'description',

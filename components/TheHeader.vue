@@ -32,15 +32,15 @@ export default {
   font-weight: bold;
 }
 
-.header__title > h1 {
-  margin: 0;
+.header__title h1,a {
   font-size: inherit;
+  margin: 0;
 }
 
 .header--small {
   height: 10vh;
   padding: 0 20px;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .header--big {
