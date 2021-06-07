@@ -44,7 +44,7 @@ export default {
 }
 
 .post__date {
-  color: #616161;
+  color: var(--color-gray);
 }
 
 </style>

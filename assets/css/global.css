@@ -5,8 +5,15 @@
   --color-gray:#646464;
 }
 
+.content-wrapper {
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+  padding: 20px 0;
+}
 .main-content {
-  padding: 20px 27%;
+  max-width: 900px;
+  width: 90%;
 }
 
 a {
@@ -26,7 +33,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 h3 {
@@ -61,4 +68,8 @@ blockquote {
 
 img {
   max-width: 100%;
+}
+
+.nuxt-content p {
+  font-size: 20px;
 }
