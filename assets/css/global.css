@@ -70,6 +70,18 @@ img {
   max-width: 100%;
 }
 
-.nuxt-content p {
+.nuxt-content p,a {
   font-size: 20px;
+}
+
+
+.table-of-contents {
+  padding-left: 0;
+  list-style: none;
+}
+.table-of-contents li {
+  margin: 4px 0;
+}
+.table-of-contents  a {
+  border-bottom: 2px solid var(--color-gray);
 }

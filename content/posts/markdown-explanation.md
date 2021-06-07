@@ -12,6 +12,17 @@ copy pasting you can use the ```html <!--more-->``` tag (checkout this post sour
 set the content before the comment as the excerpt, and if there's no description, the excerpt will
 take its place.
 
+## Table of contents
+
+<ul class="table-of-contents">
+  <li><a href="#header">Headers</a></li>
+  <li><a href="#images">Images</a></li>
+  <li><a href="#links">Links</a></li>
+  <li><a href="#code">Code</a></li>
+  <li><a href="#quotes">Quotes</a></li>
+</ul>
+
+
 First, lets check out the headers
 
 
